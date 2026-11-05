@@ -1,0 +1,172 @@
+/* ==========================================================================
+   CSS VARIABLES (Edit your colors, fonts, and spacing here)
+   ========================================================================== */
+:root {
+  /* Colors */
+  --bg-color: #ffffff;
+  --text-color: #121212;
+  --link-color: #326891;
+  --link-hover: #326891;
+  --accent-color: #c93135;
+  --border-color: #222222;
+
+  /* Fonts */
+  --font-serif: "Georgia", "Times New Roman", serif;
+  --font-blackletter: "UnifrakturMaguntia", "Georgia", serif;
+  --font-display: "Playfair Display", "Georgia", serif;
+
+  /* Layout Limits */
+  --max-width: 680px;
+}
+
+/* ==========================================================================
+   BASE & RESET
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-serif);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* Page Layout Box */
+.page-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ==========================================================================
+   HEADER & CENTERED WORDMARK
+   ========================================================================== */
+.header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1.5rem;
+}
+
+/* Centered Responsive Image Wordmark */
+.wordmark-img {
+  max-width: 100%;
+  height: auto;
+  width: 500px; /* Adjust based on your logo dimensions */
+  display: block;
+  margin: 0 auto 0.5rem auto;
+}
+
+/* Blackletter Text Fallback (Hide image or display text) */
+.wordmark-text {
+  font-family: var(--font-blackletter);
+  font-size: 3rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  display: none; /* Set to 'block' if you want text instead of an image logo */
+}
+
+.tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: #444;
+  margin-top: 0.25rem;
+}
+
+.divider {
+  border: 0;
+  border-top: 2px solid var(--border-color);
+  margin: 1.5rem 0 2rem 0;
+}
+
+/* ==========================================================================
+   HEADLINES / CONTENT
+   ========================================================================== */
+.content-section {
+  text-align: left;
+}
+
+.headline-list {
+  list-style: none;
+  padding: 0;
+}
+
+.headline-item {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.headline-item:last-child {
+  border-bottom: none;
+}
+
+.headline-link {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--link-color);
+  text-decoration: none;
+  line-height: 1.3;
+  display: block;
+  transition: color 0.15s ease-in-out;
+}
+
+.headline-link:hover {
+  color: var(--link-hover);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer-section {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.footer-section a {
+  color: var(--link-color);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.footer-section a:hover {
+  color: var(--link-hover);
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 480px) {
+  body {
+    padding: 1.5rem 1rem;
+  }
+
+  .wordmark-img {
+    width: 240px;
+  }
+
+  .wordmark-text {
+    font-size: 2.25rem;
+  }
+
+  .headline-link {
+    font-size: 1.15rem;
+  }
+}
