@@ -38,6 +38,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2rem 1rem;
+ overflow-x: hidden;
 }
 
 /* Page Layout Box */
@@ -155,11 +156,13 @@ body {
    ========================================================================== */
 @media (max-width: 480px) {
   body {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
   }
 
   .wordmark-img {
-    width: 240px;
+    width: 85vw;
+   max-width: 380px;
+   height: auto;
   }
 
   .wordmark-text {
