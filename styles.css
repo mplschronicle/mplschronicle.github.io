@@ -41,6 +41,10 @@ body {
  overflow-x: hidden;
 }
 
+a {
+  color: var(--link-color);
+}
+
 /* Page Layout Box */
 .page-container {
   width: 100%;
